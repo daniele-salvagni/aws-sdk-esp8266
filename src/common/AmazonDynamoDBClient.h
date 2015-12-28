@@ -153,12 +153,13 @@ public:
 
 /* <p>Represents the data for an attribute. You can set one, and only one, of the elements.</p> */
 class AttributeValue{
-    MinimalList<MinimalString > SSS;
-    MinimalList<MinimalString > BS;
-    MinimalString B;
-    MinimalString S;
-    MinimalList<MinimalString > NS;
-    MinimalString N;
+    // Avoid conflict with Spark pin named 'SS'
+    MinimalList<MinimalString > SSddb;
+    MinimalList<MinimalString > BSddb;
+    MinimalString Bddb
+    MinimalString Sddb;
+    MinimalList<MinimalString > NSddb;
+    MinimalString Nddb;
     bool SSBeenSet;
     bool BSBeenSet;
     bool BBeenSet;
@@ -170,7 +171,7 @@ public:
     AttributeValue();
     bool jsonDeserialize(MinimalString json);
     MinimalString jsonSerialize() const;
-    void setSS(MinimalList<MinimalString > SSS);
+    void setSS(MinimalList<MinimalString > SS);
     void setBS(MinimalList<MinimalString > BS);
     void setB(MinimalString B);
     void setS(MinimalString S);
