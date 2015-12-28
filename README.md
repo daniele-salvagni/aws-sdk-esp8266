@@ -4,12 +4,12 @@ This fork of the experimental [aws-sdk-arduino](https://github.com/awslabs/aws-s
 
 ## Folder Structure
 
-	* /common contains all the common source code
-  * /esp8266 contains Espressif ESP8266 device-specific implementations
-	* /sparkcore contains Spark IO Core device-specific implementations
-	* /edison contains Intel Edison device-specfic implementations
-	* /galileo contains Intel Galileo device-specific implementations
-  * /mediatek contains MediaTek LinkIt One device-specific implementations
+    * /common contains all the common source code
+    * /esp8266 contains Espressif ESP8266 device-specific implementations
+    * /sparkcore contains Spark IO Core device-specific implementations
+    * /edison contains Intel Edison device-specfic implementations
+    * /galileo contains Intel Galileo device-specific implementations
+    * /mediatek contains MediaTek LinkIt One device-specific implementations
 
 
 Depending on the device that you are using, simply copy the device-specific implementations to the `common` directory so you can test out your samples using Arduino IDE.
