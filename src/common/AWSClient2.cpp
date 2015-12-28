@@ -222,8 +222,10 @@ void AWSClient2::initUnsignedHeaders(const char* signature) {
 void AWSClient2::createRequestInit(MinimalString &reqPayload) {
     //initialize object-scoped variables
     const char* dateTime = dateTimeProvider->getDateTime();
-    sprintf(awsDate, "%.8s", dateTime);
-    sprintf(awsTime, "%.6s", dateTime + 8);
+
+    strncpy(awsDate, dateTime, 8);
+    strncpy(awsTime, dateTime + 8, 6);
+
     payload = reqPayload;
     headersCreated = 0;
 
