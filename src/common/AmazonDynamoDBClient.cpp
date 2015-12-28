@@ -592,23 +592,23 @@ bool AttributeValue::jsonDeserialize(MinimalString json) {
 
     if (serializedSS != NULL) {
         SSBeenSet = true;
-        if (!SS.jsonDeserialize(serializedSS)) {
+        if (!SSddb.jsonDeserialize(serializedSS)) {
             toReturn = false;
         }
     }
     if (serializedBS != NULL) {
         BSBeenSet = true;
-        if (!BS.jsonDeserialize(serializedBS)) {
+        if (!BSddb.jsonDeserialize(serializedBS)) {
             toReturn = false;
         }
     }
     if (serializedB != NULL) {
         BBeenSet = true;
-        B = MinimalString(serializedB);
+        Bddb = MinimalString(serializedB);
     }
     if (serializedS != NULL) {
         SBeenSet = true;
-        S = MinimalString(serializedS);
+        Sddb = MinimalString(serializedS);
     }
     if (serializedNS != NULL) {
         NSBeenSet = true;
@@ -618,7 +618,7 @@ bool AttributeValue::jsonDeserialize(MinimalString json) {
     }
     if (serializedN != NULL) {
         NBeenSet = true;
-        N = MinimalString(serializedN);
+        Nddb = MinimalString(serializedN);
     }
     if (serializedSS != NULL) {
         delete[] serializedSS;
@@ -669,32 +669,32 @@ MinimalString AttributeValue::jsonSerialize() const {
     int pairsAssigned = 0;
 
     if (SSBeenSet) {
-        MinimalString pairValue = SS.jsonSerialize();
+        MinimalString pairValue = SSddb.jsonSerialize();
         pairValue.setAlreadySerialized(true);
         pairs[pairsAssigned++] = MinimalKeyValuePair<MinimalString,MinimalString>(SS_KEY, pairValue);
     }
     if (BSBeenSet) {
-        MinimalString pairValue = BS.jsonSerialize();
+        MinimalString pairValue = BSddb.jsonSerialize();
         pairValue.setAlreadySerialized(true);
         pairs[pairsAssigned++] = MinimalKeyValuePair<MinimalString,MinimalString>(BS_KEY, pairValue);
     }
     if (BBeenSet) {
-        MinimalString pairValue = B.jsonSerialize();
+        MinimalString pairValue = Bddb.jsonSerialize();
         pairValue.setAlreadySerialized(true);
         pairs[pairsAssigned++] = MinimalKeyValuePair<MinimalString,MinimalString>(B_KEY, pairValue);
     }
     if (SBeenSet) {
-        MinimalString pairValue = S.jsonSerialize();
+        MinimalString pairValue = Sddb.jsonSerialize();
         pairValue.setAlreadySerialized(true);
         pairs[pairsAssigned++] = MinimalKeyValuePair<MinimalString,MinimalString>(S_KEY, pairValue);
     }
     if (NSBeenSet) {
-        MinimalString pairValue = NS.jsonSerialize();
+        MinimalString pairValue = NSddb.jsonSerialize();
         pairValue.setAlreadySerialized(true);
         pairs[pairsAssigned++] = MinimalKeyValuePair<MinimalString,MinimalString>(NS_KEY, pairValue);
     }
     if (NBeenSet) {
-        MinimalString pairValue = N.jsonSerialize();
+        MinimalString pairValue = Nddb.jsonSerialize();
         pairValue.setAlreadySerialized(true);
         pairs[pairsAssigned++] = MinimalKeyValuePair<MinimalString,MinimalString>(N_KEY, pairValue);
     }
@@ -704,58 +704,58 @@ MinimalString AttributeValue::jsonSerialize() const {
     return map.jsonSerialize();
 }
 
-void AttributeValue::setSS(MinimalList<MinimalString > SSS) {
+void AttributeValue::setSS(MinimalList<MinimalString > SS) {
     SSBeenSet = true;
-    this->SSS = SSS;
+    this->SSddb = SS;
 }
 
 void AttributeValue::setBS(MinimalList<MinimalString > BS) {
     BSBeenSet = true;
-    this->BS = BS;
+    this->BSddb = BS;
 }
 
 void AttributeValue::setB(MinimalString B) {
     BBeenSet = true;
-    this->B = B;
+    this->Bddb = B;
 }
 
 void AttributeValue::setS(MinimalString S) {
     SBeenSet = true;
-    this->S = S;
+    this->Sddb = S;
 }
 
 void AttributeValue::setNS(MinimalList<MinimalString > NS) {
     NSBeenSet = true;
-    this->NS = NS;
+    this->NSddb = NS;
 }
 
 void AttributeValue::setN(MinimalString N) {
     NBeenSet = true;
-    this->N = N;
+    this->Nddb = N;
 }
 
 MinimalList<MinimalString > AttributeValue::getSS() const {
-    return SS;
+    return SSddb;
 }
 
 MinimalList<MinimalString > AttributeValue::getBS() const {
-    return BS;
+    return BSddb;
 }
 
 MinimalString AttributeValue::getB() const {
-    return B;
+    return Bddb;
 }
 
 MinimalString AttributeValue::getS() const {
-    return S;
+    return Sddb;
 }
 
 MinimalList<MinimalString > AttributeValue::getNS() const {
-    return NS;
+    return NSddb;
 }
 
 MinimalString AttributeValue::getN() const {
-    return N;
+    return Nddb;
 }
 
 ProvisionedThroughput::ProvisionedThroughput() {
