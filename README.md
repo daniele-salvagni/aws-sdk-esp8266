@@ -76,3 +76,9 @@ const char* awsSecKey = "YOUR AWS SECRET KEY HERE";
 #### Step 4: Setting up Hardware
 
 The ESP8266 sample uses only a "virtual sensor" (i.e. numbers generated randomly), so it is only necessary to give power to the module without adding extra components.
+
+----------
+
+###### Disclaimer
+
+This fork is not affiliated in any way with Amazon Web Services (AWS), Arduino or Espressif which are registered trademarks of their respective holders.
