@@ -13,11 +13,11 @@ const char* AWS_REGION = "eu-west-1";  // REPLACE with your region
 const char* AWS_ENDPOINT = "amazonaws.com";
 
 // Init and connect Esp8266 WiFi to local wlan
-char* ssid = "myssid"; // REPLACE with your network SSID (name)
-char* pass = "mypass"; // REPLACE with your network password (use for WPA, or use as key for WEP)
+char* pSSID = "myssid"; // REPLACE with your network SSID (name)
+char* pPassword = "mypass"; // REPLACE with your network password (use for WPA, or use as key for WEP)
 
 // Constants describing DynamoDB table and values being used
 const char* TABLE_NAME = "ESP8266AWSDemo";
 const char* HASH_KEY_NAME = "id";
 const char* HASH_KEY_VALUE = "ESP01"; // Our sensor ID, to be REPLACED in case of multiple sensors.
-const char* RANGE_KEY_NAME = "time";
+const char* RANGE_KEY_NAME = "timest";
