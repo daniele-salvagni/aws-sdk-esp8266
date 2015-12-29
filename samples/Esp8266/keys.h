@@ -8,8 +8,8 @@ extern const char* awsSecKey;
 extern const char* AWS_REGION;
 extern const char* AWS_ENDPOINT;
 
-extern char* ssid;
-extern char* pass;
+extern char* pSSID;
+extern char* pPassword;
 
 extern const char* TABLE_NAME;
 extern const char* HASH_KEY_NAME;
