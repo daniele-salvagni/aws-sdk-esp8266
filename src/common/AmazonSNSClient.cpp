@@ -127,7 +127,10 @@ PublishOutput AmazonSNSClient::publish(PublishInput publishInput, ActionError& a
         newts[16] = '\0';
     	
         char* time = new char[FORMATTED_TIMESTAMP_BUFFER_LENGTH]();
-        sprintf(time, "%.8s%.6s", newts, newts + 9);
+
+        strncpy(time, newts, 8);
+        strncat(time, newts + 9, 6);
+
         dateTimeProvider->sync(time);
     }
     

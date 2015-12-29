@@ -332,7 +332,10 @@ char* getTimeFromInvalidSignatureMessage(const char* message) {
          * characters, excluding the 9th character which is a 'T'.*/
         if (message[i] == '(') {
             char* time = new char[15]();
-            sprintf(time, "%.8s%.6s", message + i + 1, message + i + 10);
+
+            strncpy(time, message + i + 1, 8);
+            strncat(time, message + i + 10, 6);
+
             return time;
         }
     }
