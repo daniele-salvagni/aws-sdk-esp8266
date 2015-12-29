@@ -44,8 +44,4 @@ public:
     void sync(const char* dateTime);
 };
 
-
-bool Esp8266_Wifi_Setup(char* pSSID, char* pPassword);
-void printWifiStatus();
-
 #endif /* Esp8266AWSIMPLEMENTATIONS_H_ */

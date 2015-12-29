@@ -3,44 +3,6 @@
 
 #include <ESP8266WiFi.h>
 
-void printWifiStatus() {
-    // print the SSID of the network you're attached to:
-    Serial.print("SSID: ");
-    Serial.println(WiFi.SSID());
-
-    // print your WiFi shield's IP address:
-    IPAddress ip = WiFi.localIP();
-    Serial.print("IP Address: ");
-    Serial.println(ip);
-
-    // print the received signal strength:
-    long rssi = WiFi.RSSI();
-    Serial.print("signal strength (RSSI):");
-    Serial.print(rssi);
-    Serial.println(" dBm");
-}
-
-bool Esp8266_Wifi_Setup(char* pSSID, char* pPassword) {
-    int tempStatus = WL_IDLE_STATUS;
-
-    Serial.print("Attempting to connect to SSID: ");
-    Serial.println(pSSID);
-
-    // If pPassword is set the most secure supported mode will be automatically selected
-    WiFi.begin(pSSID, pPassword);
-
-    // Wait for WiFi connection
-    while (WiFi.status() != WL_CONNECTED) {
-        Serial.print(".");
-        delay(500);
-    }
-
-    Serial.println();
-
-    return true;
-}
-
-
 int delayTime = 500;
 
 Esp8266HttpClient::Esp8266HttpClient() {
