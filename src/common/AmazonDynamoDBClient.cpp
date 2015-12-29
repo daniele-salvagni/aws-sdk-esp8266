@@ -612,7 +612,7 @@ bool AttributeValue::jsonDeserialize(MinimalString json) {
     }
     if (serializedNS != NULL) {
         NSBeenSet = true;
-        if (!NS.jsonDeserialize(serializedNS)) {
+        if (!NSddb.jsonDeserialize(serializedNS)) {
             toReturn = false;
         }
     }

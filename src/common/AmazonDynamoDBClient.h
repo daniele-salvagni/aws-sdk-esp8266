@@ -156,7 +156,7 @@ class AttributeValue{
     // Avoid conflict with Spark pin named 'SS'
     MinimalList<MinimalString > SSddb;
     MinimalList<MinimalString > BSddb;
-    MinimalString Bddb
+    MinimalString Bddb;
     MinimalString Sddb;
     MinimalList<MinimalString > NSddb;
     MinimalString Nddb;
