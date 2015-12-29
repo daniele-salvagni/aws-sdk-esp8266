@@ -1,3 +1,11 @@
+/* This sample uses PutItem on a DynamoDB table to save the state of a virtual
+ * temperature sensor.
+ *
+ * For this demo to work you must have keys.h/.ccp files that contain your AWS
+ * access keys and define "awsSecKey" and "awsKeyID", a DynamoDB table with the
+ * name defined by the constant TABLE_NAME with hash and range keys as defined
+ * by constants HASH_KEY_NAME/RANGE_KEY_NAME. */
+
 #include <ESP8266WiFi.h>
 
 #include "Esp8266AWSImplementations.h"
@@ -7,10 +15,12 @@
 
 
 /* Contants describing DynamoDB table and values being used. */
-static const char* HASH_KEY_NAME = "id";
-static const char* HASH_KEY_VALUE = "1"; // Our sensor ID
-static const char* RANGE_KEY_NAME = "timest";
 static const char* TABLE_NAME = "ESP8266AWSDemo";
+static const char* HASH_KEY_NAME = "id";
+static const char* RANGE_KEY_NAME = "timest";
+
+/* Our sensor ID, to be changed in case of multiple sensors. */
+static const char* HASH_KEY_VALUE = "1";
 
 /* Constants for connecting to DynamoDB. */
 static const char* AWS_REGION = "eu-west-1";
