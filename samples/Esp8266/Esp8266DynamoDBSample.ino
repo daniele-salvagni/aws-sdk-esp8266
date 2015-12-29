@@ -13,26 +13,8 @@
 #include "AWSFoundationalTypes.h"
 #include "keys.h"
 
-
-/* Contants describing DynamoDB table and values being used. */
-static const char* TABLE_NAME = "ESP8266AWSDemo";
-static const char* HASH_KEY_NAME = "id";
-static const char* RANGE_KEY_NAME = "timest";
-
-/* Our sensor ID, to be changed in case of multiple sensors. */
-static const char* HASH_KEY_VALUE = "ESP01";
-
-/* Constants for connecting to DynamoDB. */
-static const char* AWS_REGION = "eu-west-1";
-static const char* AWS_ENDPOINT = "amazonaws.com";
-
 /* Temperature reading. */
 int reading;
-
-/* Parameters for WiFi connection. */
-const char* pSSID = "myssid";
-const char* pPassword = "mypassword";
-
 
 Esp8266HttpClient httpClient;
 Esp8266DateTimeProvider dateTimeProvider;
