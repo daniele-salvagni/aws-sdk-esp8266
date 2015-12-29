@@ -20,7 +20,7 @@ static const char* HASH_KEY_NAME = "id";
 static const char* RANGE_KEY_NAME = "timest";
 
 /* Our sensor ID, to be changed in case of multiple sensors. */
-static const char* HASH_KEY_VALUE = "1";
+static const char* HASH_KEY_VALUE = "ESP01";
 
 /* Constants for connecting to DynamoDB. */
 static const char* AWS_REGION = "eu-west-1";
@@ -79,7 +79,6 @@ void setup() {
 void putTemp(int temp) {
 
     /* Create an Item. */
-    char numberBuffer[4];
     AttributeValue id;
     id.setS(HASH_KEY_VALUE);
     AttributeValue timest;
@@ -88,6 +87,7 @@ void putTemp(int temp) {
     /* Create an AttributeValue for 'temp', convert the number to a
      * string (AttributeValue object represents numbers as strings), and
      * use setN to apply that value to the AttributeValue. */
+    char numberBuffer[4];
     AttributeValue tempAttributeValue;
     sprintf(numberBuffer, "%d", temp);
     tempAttributeValue.setN(numberBuffer);
