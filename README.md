@@ -2,7 +2,7 @@
 
 This fork of the experimental [aws-sdk-arduino](https://github.com/awslabs/aws-sdk-arduino) repository is aimed to add support for the Espressif ESP8266 microcontroller [with the Arduino IDE](https://github.com/esp8266/Arduino) while also fixing and mantaining the common source without altering the support for the other boards.
 
-### Folder Structure
+### Folder Structure (/src)
 
     * /common contains all the common source code
     * /esp8266 contains Espressif ESP8266 device-specific implementations
@@ -20,7 +20,7 @@ Getting the sample working has the following steps: setting up the DynamoDB tabl
 
 ![esp8266-wiring](https://github.com/daniele-salvagni/aws-sdk-esp8266/blob/master/docs/wiring.png)
 
-*Wiring diagram for the ESP-01 module, note that GPIO0 needs to be shorted to ground and restarted to flash a new Firmware.*
+*Wiring diagram for the ESP-01 module, note that GPIO0 needs to be shorted to ground and restarted to flash a new Firmware. The module needs to be powered by an external 3.3v supply.*
 
 #### Step 1: Setting up the DynamoDB Table
 
