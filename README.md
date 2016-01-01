@@ -24,7 +24,7 @@ Getting the sample working has the following steps: setting up the DynamoDB tabl
 
 ![esp8266-wiring](https://github.com/daniele-salvagni/aws-sdk-esp8266/blob/master/docs/wiring.png)
 
-*Quick remainder of the wiring diagram for this module (ESP-01 version), note that GPIO0 needs to be shorted to ground and restarted to flash a new Firmware. The module needs to be powered by an external 3.3v supply.*
+<sub>*Quick reminder of the wiring diagram for this module (ESP-01 version), note that GPIO0 needs to be shorted to ground and restarted to flash a new Firmware. The module needs to be powered by an external 3.3v supply as most of the serial adapters won't provide enough current.*</sub>
 
 
 #### Step 1: Setting up the DynamoDB Table
@@ -76,6 +76,16 @@ const char* awsSecKey = "YOUR AWS SECRET KEY HERE";
 #### Step 4: Setting up Hardware
 
 The ESP8266 sample uses only a "virtual sensor" (i.e. numbers generated randomly), so it is only necessary to give power to the module without adding extra components.
+
+### Supported Services
+
+| Service Name                             | API Version |
+| ---------------------------------------- | ----------- |
+| Amazon DynamoDB                          | 2012-08-10  |
+| Amazon Kinesis \*                        | 2013-12-02  |
+| Amazon Simple Notification Service       | 2010-03-31  |
+
+<sub>\* *The code for creating, serializing, and deserializing Kinesis input and output objects is included, but the devices that the experimental SDK has been tested on do not have readily available HTTPS support. This code has been included so it can be used by those who want to do further experimenting with Kinesis and HTTPS.*</sub>
 
 ----------
 
