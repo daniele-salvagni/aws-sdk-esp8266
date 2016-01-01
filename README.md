@@ -79,11 +79,11 @@ The ESP8266 sample uses only a "virtual sensor" (i.e. numbers generated randomly
 
 ### Supported Services
 
-| Service Name                             | API Version |
-| ---------------------------------------- | ----------- |
-| Amazon DynamoDB                          | 2012-08-10  |
-| Amazon Kinesis \*                        | 2013-12-02  |
-| Amazon Simple Notification Service       | 2010-03-31  |
+| Service Name                             | Status                | API Version |
+| :--------------------------------------- | :-------------------- | :---------- |
+| Amazon DynamoDB                          | Complete              | 2012-08-10  |
+| Amazon Kinesis \*                        | Complete              | 2013-12-02  |
+| Amazon Simple Notification Service       | Only Publish          | 2010-03-31  |
 
 <sub>\* *The code for creating, serializing, and deserializing Kinesis input and output objects is included, but the devices that the experimental SDK has been tested on do not have readily available HTTPS support. This code has been included so it can be used by those who want to do further experimenting with Kinesis and HTTPS.*</sub>
 
