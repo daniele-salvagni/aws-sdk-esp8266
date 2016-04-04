@@ -2,8 +2,6 @@
 
 <img src="https://cloud.githubusercontent.com/assets/6751621/12034320/94eb4d4a-ae2f-11e5-9a52-8ad3431fda68.png" alt="Glorious ESP8266" title="Glorious ESP8266" align="right" />
 
-[![forthebadge](http://forthebadge.com/images/badges/powered-by-electricity.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/uses-badges.svg)](http://forthebadge.com)
-
 The purpose of this fork of the experimental [aws-sdk-arduino](https://github.com/awslabs/aws-sdk-arduino) repository is to add support for the **Espressif ESP8266** microcontroller [with the Arduino IDE](https://github.com/esp8266/Arduino) and maintain the common source while (if possible) trying not to break the support for the other Arduino based boards.
 
 ### Folder Structure (/src)
