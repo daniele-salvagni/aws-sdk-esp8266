@@ -1,6 +1,6 @@
 ## AWS SDK for ESP8266 and Arduino-compatible devices <span clear="right">
 
-<img src="https://cloud.githubusercontent.com/assets/6751621/12034320/94eb4d4a-ae2f-11e5-9a52-8ad3431fda68.png" alt="Glorious ESP8266" title="Glorious ESP8266" align="right" />
+<img src="https://cloud.githubusercontent.com/assets/6751621/14332057/30905a36-fc48-11e5-87af-ede357864439.png" alt="Glorious ESP8266" title="Glorious ESP8266" align="right" />
 
 The purpose of this fork of the experimental [aws-sdk-arduino](https://github.com/awslabs/aws-sdk-arduino) repository is to add support for the **Espressif ESP8266** microcontroller [with the Arduino IDE](https://github.com/esp8266/Arduino) and maintain the common source while (if possible) trying not to break the support for the other Arduino based boards.
 
@@ -27,7 +27,7 @@ Getting the sample working has the following steps: setting up the DynamoDB tabl
 
 #### Step 1: Setting up the DynamoDB Table
 
-You will need to set up a DynamoDB table with the same name, hash key, and range key as in the sample you are using. These values are defined as constants in the sample, i.e. `HASH_KEY_NAME` and `TABLE_NAME`. 
+You will need to set up a DynamoDB table with the same name, hash key, and range key as in the sample you are using. These values are defined as constants in the sample, i.e. `HASH_KEY_NAME` and `TABLE_NAME`.
 
 You can follow the steps below to get the tables set up with the right values:
 
@@ -54,7 +54,7 @@ You will need to create and add `keys.h` and `keys.cpp` into the `AWSArduinoSDK`
 #ifndef KEYS_H_
 #define KEYS_H_
 
-extern const char* awsKeyID;  // Declare these variables to 
+extern const char* awsKeyID;  // Declare these variables to
 extern const char* awsSecKey; // be accessible by the sketch
 
 #endif
