@@ -3,24 +3,29 @@
 
 #include <ESP8266WiFi.h>
 
-int delayTime = 500;
+const unsigned long maxTimeout = 5000;
 
-Esp8266HttpClient::Esp8266HttpClient() {
-}
+Esp8266HttpClient::Esp8266HttpClient() {}
 
 char* Esp8266HttpClient::send(const char* request, const char* serverUrl,
         int port) {
     /* Arduino String to build the response with. */
     String responseBuilder = "";
     if (client.connect(serverUrl, port)) {
-        /* Send the requests */
+        /* Send the request */
         client.println(request);
-        client.println();
-        /* Read the request into responseBuilder. */
-        delay(delayTime);
-        while (client.available()) {
-            char c = client.read();
-            responseBuilder.concat(c);
+
+        unsigned long timeout = millis();
+        while (client.available() == 0) {
+            if (millis() - timeout > maxTimeout) {
+                client.stop();
+                /* Timeout. */
+                return 0;
+            }
+        }
+
+        if (client.available()) {
+            responseBuilder += client.readString();
         }
         client.stop();
     } else {

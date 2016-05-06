@@ -7,7 +7,7 @@
 
 /* HttpClient implementation to be used on the Esp8266 device. */
 class Esp8266HttpClient: public IHttpClient {
-    WiFiClient client;
+    WiFiClientSecure client;
 public:
     Esp8266HttpClient();
     /* Send http request and return the response. */
