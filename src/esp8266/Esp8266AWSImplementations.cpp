@@ -24,7 +24,7 @@ char* Esp8266HttpClient::send(const char* request, const char* serverUrl,
             }
         }
 
-        while (client.available()) {
+        if (client.available()) {
             responseBuilder += client.readString();
         }
         client.stop();
